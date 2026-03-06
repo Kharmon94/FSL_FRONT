@@ -3,6 +3,6 @@ builder = "dockerfile"
 dockerfilePath = "Dockerfile"
 
 [deploy]
-startCommand = "serve -s dist -l ${PORT}"
+startCommand = "serve -s dist -l 0.0.0.0:${PORT}"
 healthcheckPath = "/"
 healthcheckTimeout = 30
