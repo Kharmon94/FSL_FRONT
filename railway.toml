@@ -1,0 +1,8 @@
+[build]
+builder = "dockerfile"
+dockerfilePath = "Dockerfile"
+
+[deploy]
+startCommand = "serve -s dist -l ${PORT}"
+healthcheckPath = "/"
+healthcheckTimeout = 30

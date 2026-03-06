@@ -1,0 +1,6 @@
+node_modules
+dist
+.env
+.env.local
+.figma-design-repo
+.figma-sync-state.json
