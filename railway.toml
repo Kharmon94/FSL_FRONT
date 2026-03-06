@@ -3,6 +3,6 @@ builder = "dockerfile"
 dockerfilePath = "Dockerfile"
 
 [deploy]
-startCommand = "serve -s dist -l 0.0.0.0:${PORT}"
+startCommand = "/app/scripts/start.sh"
 healthcheckPath = "/"
-healthcheckTimeout = 30
+healthcheckTimeout = 60

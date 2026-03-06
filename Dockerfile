@@ -19,7 +19,9 @@ RUN npm install -g serve
 
 WORKDIR /app
 COPY --from=build /app/dist ./dist
+COPY scripts/start.sh /app/scripts/start.sh
+RUN chmod +x /app/scripts/start.sh
 
 EXPOSE 3000
 ENV PORT=3000
-CMD ["sh", "-c", "serve -s dist -l 0.0.0.0:${PORT}"]
+CMD ["/app/scripts/start.sh"]
